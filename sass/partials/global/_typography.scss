@@ -1,0 +1,164 @@
+@font-face { //icon fonts FTW - I recommend https://icomoon.io/
+ font-family: 'icon';
+ src:url('../fonts/icon.eot'); 
+ src:url('../fonts/icon.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/icon.woff') format('woff'),
+     url('../fonts/icon.ttf') format('truetype'),
+     url('../fonts/icon.svg#dcft') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+.visuallyhidden {
+  @extend %visuallyhidden;
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+html {
+  font-size: ($base-font-size/16) * 100%;
+  line-height: 1.4;
+}
+
+body {
+  @extend %sans-serif;
+  background-color: $c-off-white;
+}
+
+*:focus {
+  outline: dotted 2px $c-black;
+}
+
+a {
+  color: $c-dark-grey;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: dotted 2px $c-black;
+  }
+
+}
+
+p{
+  color: $c-dark-grey;
+}
+
+h1, h1 a {
+  @extend %serif;
+  @extend %bold;
+  @include fontsize(62);
+  margin: 0;
+  color: $c-green;
+}
+h2 {
+  @extend %sans-serif-heading;
+  @extend %light;
+  @include fontsize(28);  
+  margin: 0;
+  color: $c-dark-orange;
+}
+h3, h3 a {
+  @extend %sans-serif;
+  color: $c-green;
+  font-style: italic;
+}
+.dark-button {
+  padding: 1em 2em;
+  color: $c-off-white;
+  background-color: $c-dark-orange;
+  text-transform: uppercase;
+}
+.light-button {
+  padding: 1em 2em;
+  color: $c-off-white;
+  background-color: $c-dark-orange;
+  text-transform: uppercase;
+}
+.button-wrapper {
+  margin: 2em;
+}
+//Icons
+
+.icons li {
+  display: inline;
+  list-style: none;
+  font-size: 30px;
+  padding: .5em;
+  color: $c-dark-orange;
+}
+ul.icons {
+  padding: 0;
+}
+.twitter {
+  @extend %twitter;
+}
+.facebook {
+  @extend %facebook;
+}
+.github {
+  @extend %github;
+}
+.award {
+  @extend %award;
+}
+.location {
+  @extend %location;
+}
+.glass {
+  @extend %glass;
+}
+.mug {
+  @extend %mug;
+}
+.world {
+  @extend %world;
+}
+.mail {
+  @extend %mail;
+}
+.open-brakets {
+  @extend %open-brackets;
+}
+.close-brakets {
+  @extend %close-brackets;
+}
+
+//Don't forget to enable the @mixin inline in the mixins partial!
+// .pager {
+//   li {
+//     @include inline;
+//     @include fontsize(16);
+//     padding: 0;
+//     margin: 0;
+//     margin-right: $small-gap/4;
+
+//     &:before {
+//       content:''; // remove bullets
+//     }
+
+//     &.pager__item--current {
+//       padding: $small-gap/4 $small-gap*3/4;
+//       color: $white;
+//       background-color: $primary-light;
+//     }
+
+//     a {
+//       //display: block;
+//       padding: $small-gap/4 $small-gap*3/4;
+//       text-decoration: none;
+//       color: $text-color;
+
+//       &:hover,
+//       &:focus {
+//         background-color: $secondary;
+//         color: $white;
+//       }
+//     } //a
+//   } //li
+// } //pager
